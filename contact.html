@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="MMFbFK3rG9vPRhkF3iYljWAdpAljgoBaJO0Q1QLopUU" />
+  <meta name="google-site-verification" content="04p6oYERtvFSy1DhJs66Yk67ym0uBxeNBRjjVgTbWVU" />
+
+  <title>Contact Us – Global Dream Connect</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Glacial+Indifference:wght@400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --brand: #070750;
+      --background: #f5f7fa;
+      --box-bg: #ffffff;
+      --input-bg: #f0f0f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: #000;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- Header & Navigation ---------- */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Glacial Indifference', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--brand);
+    }
+
+    nav ul.nav-list {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul.nav-list li a {
+      font-weight: 500;
+      color: var(--brand);
+      transition: color .3s ease;
+    }
+
+    nav ul.nav-list li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .hamburger-line {
+      height: 3px;
+      background: #000;
+      border-radius: 2px;
+    }
+
+    nav.nav-menu {
+      display: block; /* Always visible on desktop */
+    }
+
+    /* Mobile menu */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      nav.nav-menu {
+        display: none;
+        width: 100%;
+      }
+
+      nav.nav-menu.active {
+        display: block;
+      }
+
+      nav ul.nav-list {
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+      }
+
+      nav ul.nav-list li a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* ---------- Contact Form Section ---------- */
+    main {
+      max-width: 600px;
+      margin: 3rem auto 5rem auto;
+      background: var(--box-bg);
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    main h1 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--brand);
+    }
+
+    form {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #444;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background: var(--input-bg);
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #888;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      background: #fff;
+    }
+
+    button {
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: var(--brand);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00003a;
+    }
+
+    #thank-you-message {
+      display: none;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      color: green;
+      font-weight: 600;
+    }
+
+    .contact-info {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    footer a {
+      color: var(--brand);
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Menu -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Global Dream Connect</h1>
+
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav id="nav-menu" class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="become-a-mentor.html">Become a Mentor</a></li>
+          <li><a href="fellowship.html">Fellowship</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="thank-you-message">✅ Thank you for contacting us! We'll get back to you soon.</div>
+
+    <div class="contact-info">
+      <p>Email us directly at <a href="mailto:globaldreamconnect@gmail.com"><strong>globaldreamconnect@gmail.com</strong></a></p>
+      <p>Follow us on
+        <a href="https://www.instagram.com/global_dream_connect/" target="_blank">Instagram</a> and
+        <a href="https://www.linkedin.com/company/global-dream-connect" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Global Dream Connect
+  </footer>
+
+  <!-- JS for Form & Mobile Menu -->
+  <script>
+    // Form Submission to Google Form
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdjcF46tgVJDvFBfPuGsGitLQSW4bi_RCoQE9Ly7dYRFtSVNg/formResponse';
+    const NAME_FIELD = 'entry.716555370';
+    const EMAIL_FIELD = 'entry.771614975';
+    const MESSAGE_FIELD = 'entry.2064126447';
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append(NAME_FIELD, document.getElementById('name').value);
+      formData.append(EMAIL_FIELD, document.getElementById('email').value);
+      formData.append(MESSAGE_FIELD, document.getElementById('message').value);
+      fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        document.getElementById('contact-form').reset();
+        document.getElementById('thank-you-message').style.display = 'block';
+      }).catch(() => {
+        document.getElementById('contact-form').reset();
+        document.getElementById('thank-you-message').style.display = 'block';
+      });
+    });
+
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('#nav-menu');
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

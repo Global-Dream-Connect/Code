@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="MMFbFK3rG9vPRhkF3iYljWAdpAljgoBaJO0Q1QLopUU" />
+  <meta name="google-site-verification" content="04p6oYERtvFSy1DhJs66Yk67ym0uBxeNBRjjVgTbWVU" />
+
+  <title>Dream Builders Fellowship | Global Dream Connect</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400&family=Poppins:wght@400&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root { --brand:#070750; --bg:#fff; --text:#000; }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.55;}
+    a{color:var(--brand);text-decoration:none;}
+
+    header.site-header{background:#fff;border-bottom:1px solid #ccc;padding:1rem 2rem;position:sticky;top:0;z-index:1000;}
+    .container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+    .logo{font-family:'Glacial Indifference',sans-serif;font-size:1.8rem;color:var(--brand);}
+    nav ul.nav-list{list-style:none;display:flex;gap:2rem;}
+    nav ul.nav-list li a{font-weight:500;color:var(--brand);transition:color .3s;}
+    nav ul.nav-list li a:hover{text-decoration:underline;}
+    .hamburger{display:none;flex-direction:column;justify-content:space-between;width:25px;height:20px;background:transparent;border:none;cursor:pointer;margin-left:auto;}
+    .hamburger-line{height:3px;background:#000;border-radius:2px;}
+
+    @media(max-width:768px){
+      .container{flex-direction:column;align-items:flex-start;gap:1rem;}
+      .hamburger{display:flex;}
+      nav.nav-menu{display:none;width:100%;}
+      nav.nav-menu.active{display:block;}
+      nav ul.nav-list{flex-direction:column;gap:1rem;padding-left:0;margin-top:1rem;width:100%;}
+      nav ul.nav-list li a{display:block;padding:.5rem 0;font-size:1.1rem;}
+    }
+
+    h1,h2{color:var(--brand);margin-bottom:1rem;}
+    section{max-width:960px;margin:0 auto;padding:3rem 1rem;}
+
+    .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
+    .card{border:1px solid #ddd;border-radius:10px;padding:1.5rem;background:#f8f8ff;}
+    .card p{font-size:.9rem;margin-top:.5rem;}
+
+    .timeline li{margin:.6rem 0;padding-left:1.2rem;position:relative;font-size:.95rem;}
+    .timeline li::before{content:"\2022";position:absolute;left:0;color:var(--brand);font-size:1rem;}
+
+    .perks li{margin:.6rem 0;font-size:.95rem;list-style-type:disc;list-style-position:inside;}
+
+    /* ---------- Form ---------- */
+    .mentor-form-wrapper{max-width:600px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:2rem;}
+    .mentor-form-wrapper label{font-weight:500;display:block;margin-bottom:.25rem;}
+    .mentor-form-wrapper input,
+    .mentor-form-wrapper textarea,
+    .mentor-form-wrapper select{
+      width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;margin-bottom:1.25rem;font-family:'Poppins',sans-serif;font-size:1rem;
+    }
+    .mentor-form-wrapper button{
+      width:100%;padding:12px 24px;border:none;border-radius:8px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer;transition:opacity .2s;
+    }
+    .mentor-form-wrapper button:hover{opacity:.9;}
+
+    footer{padding:2rem 1rem;text-align:center;font-size:.9rem;color:#444;border-top:1px solid #ccc;}
+
+    /* ---------- Toast ---------- */
+    #toast{
+      position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+      background:var(--brand);color:#fff;padding:12px 28px;border-radius:8px;
+      opacity:0;pointer-events:none;transition:opacity .4s;
+      box-shadow:0 6px 14px rgba(0,0,0,.15);z-index:2000;
+    }
+    #toast.show{opacity:1;}
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Global Dream Connect</div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="become-a-mentor.html">Become a Mentor</a></li>
+          <li><a href="fellowship.html">Fellowship</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Intro ===== -->
+  <section>
+    <h1>Dream Builders Fellowship</h1>
+    <p>Our flagship internship program empowering high‑school students to build real‑world skills in marketing, technology, operations, client success, design, and leadership.</p>
+  </section>
+
+  <!-- ===== Open Roles ===== -->
+  <section>
+    <h2>Open Roles</h2>
+    <div class="roles">
+      <div class="card"><strong>Marketing Interns </strong><p>Drive social media, content, and growth campaigns.</p></div>
+      <div class="card"><strong>Tech Interns </strong><p>Build and automate internal tools & web features.</p></div>
+      <div class="card"><strong>Operations Interns </strong><p>Streamline processes and ensure day‑to‑day success.</p></div>
+      <div class="card"><strong>Client Onboarding Interns </strong><p>Deliver a world‑class first‑touch experience to partners.</p></div>
+      <div class="card"><strong>Graphic Design Interns </strong><p>Create engaging visuals for campaigns and products.</p></div>
+      <div class="card"><strong>HR Intern </strong><p>Champion culture, hiring, and people success.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== Application Form ===== -->
+  <section>
+    <h2 style="text-align:center;">Application Form</h2>
+    <div class="mentor-form-wrapper">
+      <form id="appForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLScS7b8Fi8MLzcctUSzxu8BSDrj3enGZqBCL7YJZS_ME3KwmtA/formResponse"
+            method="POST"
+            target="hidden_iframe"
+            onsubmit="afterSend()">
+
+        <label for="name">Full Name *</label>
+        <input id="name" name="entry.988813139" type="text" required>
+
+        <label for="email">Email *</label>
+        <input id="email" name="entry.1343202906" type="email" required>
+
+        <label for="linkedin">LinkedIn Profile *</label>
+        <input id="linkedin" name="entry.432700971" type="url" placeholder="https://linkedin.com/in/yourprofile" required>
+
+        <label for="resume">Resume Link (Drive/Dropbox) *</label>
+        <input id="resume" name="entry.914460624" type="url" placeholder="https://drive.google.com/..." required>
+
+        <label for="role">Role Applying For *</label>
+        <select id="role" name="entry.176047779" required>
+          <option value="" disabled selected>Select a role</option>
+          <option>Marketing Intern</option>
+          <option>Tech Intern</option>
+          <option>Operations Intern</option>
+          <option>Client Onboarding Intern</option>
+          <option>Graphic Design Intern</option>
+          <option>HR Intern</option>
+        </select>
+
+        <label for="motivation">Why do you want to join? *</label>
+        <textarea id="motivation" name="entry.12056140" rows="5" required></textarea>
+
+        <!-- Google hidden inputs -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="draftResponse" value="[]">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" value="1234567890123">
+
+        <button type="submit">Submit Application</button>
+      </form>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </div>
+  </section>
+
+  <!-- toast -->
+  <div id="toast">🎉 Application submitted! Thank you.</div>
+
+
+  <!-- ===== Perks ===== -->
+  <section>
+    <h2>What You’ll Gain</h2>
+    <ul class="perks">
+      <li>Official Certificate of Completion issued by Global Dream Connect</li>
+      <li>Performance‑based Letter of Recommendation for college and job applications</li>
+      <li>Verified Volunteer Hours for academic and community service use</li>
+      <li>Hands‑on experience working on real projects with cross‑functional teams</li>
+      <li>Leadership development through mentorship and team collaboration</li>
+      <li>A Higher Leadership position if done extraordinary work </li>
+      <li>Access to the exclusive alumni network</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Global Dream Connect
+  </footer>
+
+  <script>
+    /* mobile menu toggle */
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu   = document.querySelector("#nav-menu");
+    hamburger?.addEventListener("click", () => {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !expanded);
+      navMenu.classList.toggle("active");
+    });
+
+    /* show toast + reset form */
+    function afterSend(){
+      const toast = document.getElementById('toast');
+      setTimeout(()=>{
+        document.getElementById('appForm').reset();
+        toast.classList.add('show');
+      },300);           // show toast after we send
+      setTimeout(()=>toast.classList.remove('show'),3300); // hide after 3 s
+    }
+  </script>
+</body>
+</html>

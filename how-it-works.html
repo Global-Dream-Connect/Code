@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="MMFbFK3rG9vPRhkF3iYljWAdpAljgoBaJO0Q1QLopUU" />
+  <meta name="google-site-verification" content="04p6oYERtvFSy1DhJs66Yk67ym0uBxeNBRjjVgTbWVU" />
+
+  <title>How It Works – Global Dream Connect</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Glacial+Indifference:wght@400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* brand palette */
+      --brand: #070750;
+    }
+
+    /* ---------- Base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- Header & Navigation ---------- */
+    .site-header {
+      background: #ffffff;              /* match reference */
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Glacial Indifference', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--brand);
+    }
+
+    nav .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .nav-list a {
+      font-weight: 500;
+      color: var(--brand);
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hamburger (desktop hidden) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .hamburger-line {
+      height: 3px;
+      background: #000;
+      border-radius: 2px;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #f0f4ff;             /* align with reference hero */
+      color: var(--brand);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #333;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    /* ---------- Main Content ---------- */
+    main {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .steps h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--brand);
+      font-weight: 400;
+    }
+
+    .step {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .time-commitment {
+      background: #e8f0fc;
+      border: 1px solid #b3d1fc;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .time-commitment h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--brand);
+      font-weight: 400;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background: #00003a;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--brand);
+      margin: 0 0.5rem;
+    }
+
+    /* ---------- Mobile Styles ---------- */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .hamburger { display: flex; }               /* show on mobile */
+
+      nav.nav-menu { display: none; width: 100%; }
+      nav.nav-menu.active { display: block; }
+
+      nav .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+      }
+
+      nav .nav-list a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ======= HEADER / NAV ======= -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Global Dream Connect</h1>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Menu links -->
+      <nav id="nav-menu" class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="become-a-mentor.html">Become a Mentor</a></li>
+          <li><a href="fellowship.html">Fellowship</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero">
+    <h1>How It Works</h1>
+    <p>Learn about the steps involved to become a mentor and start inspiring students worldwide.</p>
+  </section>
+
+  <!-- ======= MAIN ======= -->
+  <main>
+    <section class="steps">
+      <h2>Step‑by‑Step Process</h2>
+      <div class="step">Step 1: Fill out the mentor application form.</div>
+      <div class="step">Step 2: Our team reviews your application.</div>
+      <div class="step">Step 3: You get access to our platform and resources.</div>
+      <div class="step">Step 4: Start mentoring students around the world!</div>
+    </section>
+
+    <section class="time-commitment">
+      <h2>Time Commitment</h2>
+      <p>Just 2 hours per week can change a student's life. You choose the schedule.</p>
+    </section>
+
+    <a href="become-a-mentor.html" class="cta-button">Become a Mentor Today</a>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="faq.html">FAQs</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy</a>
+    </p>
+    <p>
+      Follow us:
+      <a href="https://www.instagram.com/global_dream_connect/">Instagram</a> |
+      <a href="https://www.linkedin.com/company/global-dream-connect-gdc">LinkedIn</a><br/>
+      Email: <a href="mailto:globaldreamconnect@gmail.com">globaldreamconnect@gmail.com</a>
+    </p>
+  </footer>
+
+  <!-- ======= JS: mobile menu toggle ======= -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu   = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
